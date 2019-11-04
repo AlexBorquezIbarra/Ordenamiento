@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListBox x:Name="lstNumeros" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="166"/>
+        <Button x:Name="btnOrdenar" Content="Ordenar Shell" HorizontalAlignment="Left" Margin="181,10,0,0" VerticalAlignment="Top" Width="152" Click="BtnOrdenar_Click"/>
+        <Button x:Name="btnOrdenarBubble" Content="Ordenar Bubble" HorizontalAlignment="Left" Margin="181,35,0,0" VerticalAlignment="Top" Width="152" Click="BtnOrdenarBubble_Click"/>
+
     </Grid>
 </Window>
