@@ -7,9 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="lstNumeros" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="166"/>
-        <Button x:Name="btnOrdenar" Content="Ordenar Shell" HorizontalAlignment="Left" Margin="181,10,0,0" VerticalAlignment="Top" Width="152" Click="BtnOrdenar_Click"/>
-        <Button x:Name="btnOrdenarBubble" Content="Ordenar Bubble" HorizontalAlignment="Left" Margin="181,35,0,0" VerticalAlignment="Top" Width="152" Click="BtnOrdenarBubble_Click"/>
-
+        <ListView x:Name="lstNumeros" HorizontalAlignment="Left" Height="384" Margin="10,10,0,0" VerticalAlignment="Top" Width="362">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding nombre}" Header="Nombre" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding promedio}" Header="Promedio" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding faltas}" Header="Faltas" Width="120"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnOrdenar" Content="Ordenar Shell" HorizontalAlignment="Left" Margin="394,31,0,0" VerticalAlignment="Top" Width="152" Click="BtnOrdenar_Click"/>
+        <Button x:Name="btnOrdenarBubble" Content="Ordenar Bubble" HorizontalAlignment="Left" Margin="394,56,0,0" VerticalAlignment="Top" Width="152" Click="BtnOrdenarBubble_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="442,10,0,0" TextWrapping="Wrap" Text="Promedio" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="453,104,0,0" TextWrapping="Wrap" Text="Faltas" VerticalAlignment="Top"/>
+        <Button x:Name="btnOrdenarShellFaltas" Content="Ordenar Shell" HorizontalAlignment="Left" Margin="394,125,0,0" VerticalAlignment="Top" Width="152" Click="BtnOrdenarShellFaltas_Click"/>
+        <Button x:Name="btnOrdenarBubbleFaltas" Content="Ordenar Bubble" HorizontalAlignment="Left" Margin="394,150,0,0" VerticalAlignment="Top" Width="152" Click="BtnOrdenarBubbleFaltas_Click"/>
     </Grid>
 </Window>
